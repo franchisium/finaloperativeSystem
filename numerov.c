@@ -10,18 +10,16 @@
 #define HBAR 1.0      
 #define OMEGA 1.0    
 
-// Potencial del oscilador armónico
 double V(double x) {
     return 0.5 * M * OMEGA * OMEGA * x * x;
 }
 
-// Implementación del método de Numerov
 void numerov(double psi[], double E) {
     double x = X_MIN;
     double k_prev, k_curr, k_next;
 
-    psi[0] = 0.0;       // Condición inicial
-    psi[1] = 1e-5;      // Segundo valor inicial
+    psi[0] = 0.0;      
+    psi[1] = 1e-5;     
 
     for (int i = 1; i < N - 1; i++) {
         x = X_MIN + i * H;
@@ -37,25 +35,21 @@ void numerov(double psi[], double E) {
 
 int main() {
     double psi[N];
-    double E = 1.0; // Energía inicial
+    double E = 1.0; 
 
-    // Calcular las funciones de onda con Numerov
     numerov(psi, E);
 
-    // Guardar los resultados en un archivo
     FILE *file = fopen("resultados.txt", "w");
     if (file == NULL) {
-        printf("Error al abrir el archivo.\n");
+        printf("Error al abrir el archivo\n");
         return 1;
     }
 
-    // Escribir los resultados en el archivo
     for (int i = 0; i < N; ++i) {
         double x = X_MIN + i * H;
         fprintf(file, "%f %f\n", x, psi[i]);
     }
 
-    // Cerrar el archivo
     fclose(file);
     printf("Datos guardados en resultados.txt\n");
 

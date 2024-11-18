@@ -62,8 +62,4 @@ El programa debe calcular y graficar: Las funciones propias y las densidades de 
 
 Ejemplo de graficas esperadas:
 
-
-Funciones propias:
-
-
-Densidades de probabilidad:
+![graphs](/src/graphsesperadas.jpg)

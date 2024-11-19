@@ -18,9 +18,11 @@ Paquetes necesarios:
 
 #### Fedora:
 
-    ´sudo dnf install gcc make python3 python3-pip´
+    ´sudo dnf install gcc make python3 python3-pip fim´
 
     'sudo dnf install python3.11-venv'
+
+    ´fim oscilador_armonico_cuantico.png´
 
 #### Debian y Ubuntu (WSL):
 

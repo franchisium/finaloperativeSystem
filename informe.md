@@ -2,7 +2,7 @@
 
 Este proyecto implementa el método de Numerov para resolver numericamente el oscilador armonico cuantico, un sistema fisico que se describe mdiante la ecuacion de Schrodinger en una direccion:
 
-![Ecuacion](/src/ecuacionosci.png)
+                                                                    ![Ecuacion](/src/ecuacionosci.png)
 
 Estos son pasos necesarios para ejecutarlo en Debian y Fedora (tambien si quieres realizarlo con Ubuntu WSL):
 
@@ -13,7 +13,6 @@ Paquetes necesarios:
 - **gcc** compilar c
 - **make**
 - **python3** manejar el script de graficas
-- **pip** para instalar paquetes **matplotlib** para hacer plots
 
 ## Instalacion de dependencias
 
@@ -21,9 +20,7 @@ Paquetes necesarios:
 
     ´sudo dnf install gcc make python3 python3-pip´
 
-    ´pip3 install matplotlib´
-
-    ´sudo dnf install fim´ //ver las graficas como imagen
+    'sudo dnf install python3.11-venv'
 
 #### Debian y Ubuntu (WSL):
 
@@ -31,9 +28,7 @@ Paquetes necesarios:
 
     ´sudo apt install gcc make python3 python3-pip´
 
-    ´pip3 install matplotlib´
-    
-    ´sudo apt install fim´ //ver las graficas como imagen
+    'sudo apt install python3.11-venv'
 
 ## Compilar y Ejecutar
 
@@ -43,11 +38,9 @@ Paquetes necesarios:
 
     'make' //automatizar el proceso
 
-    './numerov'
+    //una vez finalizado
 
-    'python3 plot.py' //genera la imagen de las graficas
-
-    fim resultados.png
+    'make clean'
 
 ## Teoria y Resultados
 
@@ -58,7 +51,7 @@ El metodo de Numerov resuelve ecuaciones diferenciales de la forma:
 
 El potencial del oscilador armonico cuántico está dado por 
 
-![potencial](/src/potencial.png)
+                                                        ![potencial](/src/potencial.png)
 
 La ecuación de Schrodinger se discretiza usando el método de Numerov, obteniendo un conjunto de valores discretos para ψ(x).
 
@@ -68,4 +61,4 @@ El programa debe calcular y graficar: Las funciones propias y las densidades de 
 
 Ejemplo de graficas esperadas:
 
-![graphs](/src/graphsesperadas.jpg)
+                                                            ![graphs](/src/graphsesperadas.jpg)

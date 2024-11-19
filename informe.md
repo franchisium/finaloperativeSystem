@@ -2,7 +2,7 @@
 
 Este proyecto implementa el método de Numerov para resolver numericamente el oscilador armonico cuantico, un sistema fisico que se describe mdiante la ecuacion de Schrodinger en una direccion:
 
-                                                                    ![Ecuacion](/src/ecuacionosci.png)
+![Ecuacion](/src/ecuacionosci.png)
 
 Estos son pasos necesarios para ejecutarlo en Debian y Fedora (tambien si quieres realizarlo con Ubuntu WSL):
 
@@ -53,7 +53,7 @@ El metodo de Numerov resuelve ecuaciones diferenciales de la forma:
 
 El potencial del oscilador armonico cuántico está dado por 
 
-                                                        ![potencial](/src/potencial.png)
+![potencial](/src/potencial.png)
 
 La ecuación de Schrodinger se discretiza usando el método de Numerov, obteniendo un conjunto de valores discretos para ψ(x).
 
@@ -63,4 +63,4 @@ El programa debe calcular y graficar: Las funciones propias y las densidades de 
 
 Ejemplo de graficas esperadas:
 
-                                                            ![graphs](/src/graphsesperadas.jpg)
+![graphs](/src/graphsesperadas.jpg)

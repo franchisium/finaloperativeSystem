@@ -4,7 +4,7 @@ Este proyecto implementa el método de Numerov para resolver numericamente el os
 
 ![Ecuacion](/src/ecuacionosci.png)
 
-Estos son pasos necesarios para ejecutarlo en Debian y Fedora:
+Estos son pasos necesarios para ejecutarlo en Debian y Fedora (tambien si quieres realizarlo con Ubuntu WSL):
 
 ## Requisitos del sistema
 
@@ -23,6 +23,8 @@ Paquetes necesarios:
 
     ´pip3 install matplotlib´
 
+    ´sudo dnf install fim´ //ver las graficas como imagen
+
 #### Debian y Ubuntu (WSL):
 
     ´sudo apt update´
@@ -30,6 +32,8 @@ Paquetes necesarios:
     ´sudo apt install gcc make python3 python3-pip´
 
     ´pip3 install matplotlib´
+    
+    ´sudo apt install fim´ //ver las graficas como imagen
 
 ## Compilar y Ejecutar
 
@@ -37,11 +41,13 @@ Paquetes necesarios:
 
     'cd finaloperativeSystem'
 
-    'make'
+    'make' //automatizar el proceso
 
     './numerov'
 
-    'python3 plot.py'
+    'python3 plot.py' //genera la imagen de las graficas
+
+    fim resultados.png
 
 ## Teoria y Resultados
 

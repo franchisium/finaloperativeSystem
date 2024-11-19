@@ -22,16 +22,26 @@ Paquetes necesarios:
 
     'sudo dnf install python3.11-venv'
 
-    ´fim oscilador_armonico_cuantico.png´
+    ´fim oscilador_armonico_cuantico.png´ // una vez compilado y ejecutado, sino sale la imagen 
 
-#### Debian y Ubuntu (WSL):
+#### Debian:
 
     ´sudo apt update´
 
     ´sudo apt install gcc make python3 python3-pip´
 
     'sudo apt install python3.11-venv'
+    
+### Ubuntu WSL:
 
+    ´sudo apt upgrade´
+
+    ´sudo apt install gcc make python3 python3-pip fim´
+
+    ´sudo apt install python3.11-venv´
+    
+    ´fim oscilador_armonico_cuantico.png´
+    
 ## Compilar y Ejecutar
 
     'git clone https://github.com/franchisium/finaloperativeSystem.git'

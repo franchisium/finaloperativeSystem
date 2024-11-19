@@ -1,15 +1,39 @@
+C = gcc
+O = -o
+W = -Wall
+PAQUETES = -lm
+ARCHIVO_C = numerov.c
+EJECUTABLE_C = oscilador
+VENV_DIR = .venv
+PYTHON_SCRIPT = plot.py
+IMAGEN = oscilador_armonico_cuantico.png
 
-TARGET = numerov
+.PHONY: all clean run_c run_python 
+# Regla principal: compilar y ejecutar el programa en C
+all: $(EJECUTABLE_C) run_c run_python
 
-SRC = numerov.c #tomar la fuente
+# Regla para compilar el programa en C
+$(EJECUTABLE_C): $(ARCHIVO_C)
+	$(C) $(W) $(O) $@ $^ $(PAQUETES)
 
-CC = gcc #compilacion
-CFLAGS = -Wall -lm
+venv: $(VENV_DIR)/bin/activate
 
-all: $(TARGET)
+$(VENV_DIR)/bin/activate:
+	python3 -m venv $(VENV_DIR)
+	$(VENV_DIR)/bin/pip install matplotlib numpy
 
-$(TARGET): $(SRC)
-	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
+# Regla para ejecutar el programa compilado
+run_c: $(EJECUTABLE_C)
+	@echo "Ejecutando programa en C..."
+	./$(EJECUTABLE_C)
 
+run_python: venv
+	$(VENV_DIR)/bin/python $(PYTHON_SCRIPT)
+
+
+# Limpieza de archivos generados
 clean:
-	rm -f $(TARGET) *.o
+	rm -f $(EJECUTABLE_C)
+	rm -f resultados.txt
+	rm -r $(VENV_DIR)
+	rm -f $(IMAGEN)

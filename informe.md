@@ -4,7 +4,7 @@ Este proyecto implementa el método de Numerov para resolver numericamente el os
 
 ![Ecuacion](/src/ecuacionosci.png)
 
-Estos son pasos necesarios para ejecutarlo en Debian y Fedora:
+Estos son pasos necesarios para ejecutarlo en Debian y Fedora (tambien si quieres realizarlo con Ubuntu WSL):
 
 ## Requisitos del sistema
 

@@ -3,7 +3,7 @@
 #include <math.h>
 
 #define N 1000        
-#define X_MIN -15.0   // Extender el rango para evitar artefactos
+#define X_MIN -15.0  
 #define X_MAX 15.0   
 #define H ((X_MAX - X_MIN) / N)  
 #define M 1.0        
@@ -23,8 +23,7 @@ void numerov(double psi[], double E) {
 
     for (int i = 1; i < N - 1; i++) {
         x = X_MIN + i * H;
-        
-        // Evitar inestabilidad numérica
+
         k_prev = fmax(0, 2 * M * (E - V(x - H)) / (HBAR * HBAR));
         k_curr = fmax(0, 2 * M * (E - V(x)) / (HBAR * HBAR));
         k_next = fmax(0, 2 * M * (E - V(x + H)) / (HBAR * HBAR));
@@ -45,7 +44,7 @@ void normalize(double psi[]) {
     norm = sqrt(norm);
 
     if (norm == 0) {
-        printf("Error: la función de onda no puede normalizarse.\n");
+        printf("Error: la función de onda no puede normalizarse\n");
         exit(1);
     }
 
@@ -56,7 +55,7 @@ void normalize(double psi[]) {
 
 int main() {
     double psi[N];
-    double energies[] = {0.5, 1.5, 2.5, 3.5}; // Energías de los primeros 4 estados
+    double energies[] = {0.5, 1.5, 2.5, 3.5}; 
     int num_states = sizeof(energies) / sizeof(energies[0]);
 
     FILE *file = fopen("resultados.txt", "w");
